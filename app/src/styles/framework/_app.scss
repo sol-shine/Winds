@@ -1,0 +1,37 @@
+html {
+	font-size: 12px;
+}
+
+body {
+	background-color: $background-gray;
+	font-family: $primary;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+.highlight,
+.highlight-note {
+	background: transparent;
+	background-color: $highlight-color;
+	color: $foreground-black;
+	cursor: pointer;
+}
+
+.click,
+.clickable {
+	cursor: pointer;
+}
+
+.muted {
+	color: $foreground-darkgray;
+}

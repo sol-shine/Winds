@@ -1,0 +1,34 @@
+.shows-grid {
+	display: grid;
+	grid-column-gap: 2em;
+	grid-row-gap: 2em;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 2em;
+	max-width: 100%;
+
+	.shows-grid-item {
+		color: inherit;
+		font-weight: bolder;
+		min-width: 0;
+		text-decoration: inherit;
+
+
+		.shows-grid-item-image {
+			background-color: $white-smoke;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			border-radius: $border-radius;
+			box-shadow: $box-shadow;
+			margin-bottom: 1em;
+			// this is a "hack" to give us a perfectly square container, regardless of width
+			padding-bottom: 100%;
+			transition-duration: 0.3s;
+			transition-property: transform;
+
+			&:hover{
+				transform: scale(1.01);
+			}
+		}
+	}
+}

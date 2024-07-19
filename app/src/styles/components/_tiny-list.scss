@@ -1,0 +1,43 @@
+.tiny-list {
+	> * {
+		border-bottom: 1px solid $foreground-lightgray;
+		color: inherit;
+		display: flex;
+		font-weight: bolder;
+		padding: 1em 0;
+		text-decoration: inherit;
+
+		> * {
+			&:not(:last-child) {
+				margin-right: 1em;
+			}
+
+			&:first-child {
+				background: $white-smoke;
+				flex-shrink: 0;
+				height: 1.5em;
+				width: 1.5em;
+			}
+
+			&:nth-child(2) {
+				flex-grow: 1;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			&:last-child {
+				font-weight: normal;
+				white-space: nowrap;
+
+				> *:not(:last-child) {
+					margin-right: 1em;
+				}
+			}
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}

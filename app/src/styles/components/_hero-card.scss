@@ -1,0 +1,62 @@
+$border-width: 3px;
+
+.hero-card {
+	align-items: flex-start;
+	background-origin: border-box;
+	background-position: center;
+	background-size: cover;
+	border-color: transparent;
+	border-radius: $border-radius;
+	border-style: solid;
+	border-width: $border-width;
+	box-shadow: $box-shadow;
+	color: $foreground-white;
+	display: flex;
+	flex-direction: column-reverse;
+	font-family: $primary;
+	height: 178px;
+	object-fit: cover;
+	padding: 2em;
+	position: relative;
+	text-align: left;
+
+	h1 {
+		color: $foreground-white;
+		font-size: 22px;
+		font-weight: 600;
+		margin: 0;
+	}
+
+	.info {
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	.logo {
+		background: url(/images/logos/partial-white.svg) center no-repeat;
+		display: block;
+		height: 25px;
+		left: 20px;
+		opacity: 0.5;
+		top: 20px;
+		width: 25px;
+	}
+
+	> *:last-child {
+		margin-bottom: auto;
+	}
+
+	label {
+		color: $foreground-white;
+	}
+
+	&.selected {
+		border-color: $foreground-green;
+		border-style: solid;
+		border-width: $border-width;
+
+		label {
+			color: $foreground-green;
+		}
+	}
+}

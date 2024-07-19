@@ -1,0 +1,31 @@
+.tabs {
+	list-style-type: none;
+	margin: 0;
+	margin-bottom: 2em;
+	min-height: 2em;
+	padding-left: 1em;
+
+	.tab {
+		color: $foreground-darkgray;
+		cursor: pointer;
+		display: inline;
+		font-family: $primary;
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-right: 24px;
+		padding-bottom: 6px;
+		text-transform: uppercase;
+		transition-duration: 0.3s;
+		transition-property: color;
+
+		&.active{
+			border-bottom: 2px solid $foreground-green;
+			color: $foreground-black;
+		}
+
+		&:hover {
+			color: $foreground-black;
+		}
+	}
+}

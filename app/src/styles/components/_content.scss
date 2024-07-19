@@ -1,0 +1,40 @@
+.feed-content-wrapper {
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.08);
+	margin-bottom: 1em;
+}
+
+.feed-content {
+	-webkit-app-region: no-drag;
+	margin: auto;
+	max-width: 100%;
+	position: relative;
+
+	#feed-content {
+		padding: 0 60px 100px;
+	}
+
+	h1 {
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 15px;
+		font-weight: normal;
+		line-height: 26px;
+	}
+
+	a {
+		color: $foreground-green;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+}

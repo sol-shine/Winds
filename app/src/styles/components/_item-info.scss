@@ -1,0 +1,60 @@
+.item-info {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	font-size: 0.97em;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	margin-bottom: 1.4em;
+	margin-top: 1.4em;
+	text-transform: uppercase;
+
+	> * {
+		margin-right: 1em;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	i {
+		color: $batman;
+		font-size: 1.5em;
+		font-weight: normal;
+
+		&.fa-bookmark.fas {
+			font-weight: 900;
+		}
+	}
+
+	a {
+		color: $foreground-black;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.tag-item {
+		align-items: center;
+		background-color: rgba(68, 188, 117, 0.05);
+		border: 1px solid $background-green;
+		border-radius: 20px;
+		color: $foreground-black;
+		display: flex;
+		letter-spacing: initial;
+		padding: 2px 5px;
+
+		a {
+			color: $foreground-green;
+		}
+
+		.loader-roll,
+		svg {
+			margin-left: 5px;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}

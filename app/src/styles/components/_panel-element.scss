@@ -1,0 +1,176 @@
+.panel {
+	background-color: $background-white;
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	margin-bottom: 1em;
+
+	&.hasHighlight {
+		.panel-element {
+			color: $foreground-darkgray;
+
+			&.highlighted {
+				color: $foreground-black;
+			}
+		}
+	}
+
+	&.expanded {
+		height: 100%;
+	}
+
+	&.with-hero-card {
+		margin-top: -1em;
+		padding-top: 1em;
+	}
+
+	.panel-header {
+		align-items: center;
+		background-color: $background-white;
+		border-top-left-radius: $border-radius;
+		border-top-right-radius: $border-radius;
+		box-shadow: $box-shadow;
+		display: flex;
+		font-size: 1.07em;
+		font-weight: 700;
+		padding: 1em;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+
+		.aside {
+			color: $foreground-darkgray;
+			padding-left: 6px;
+		}
+
+		.right {
+			margin-left: auto;
+		}
+	}
+
+	a.panel-header {
+		transition: all 0.22s ease-in-out;
+
+		&:hover {
+			background-color: $background-lightishgray;
+		}
+	}
+
+	.panel-element {
+		align-items: center;
+		border-top: 1px solid $foreground-lightgray;
+		color: inherit;
+		cursor: pointer;
+		display: flex;
+		font-size: 0.98em;
+		font-weight: 500; // TODO: @kenhoff - figure out why we have to set this explicitly, rather than with 'bolder'
+		margin: 0 1em;
+		padding: 1em 0;
+		text-decoration: inherit;
+		transition-duration: 0.2s;
+		transition-property: margin-left;
+		white-space: nowrap;
+
+		&:hover {
+			margin-left: 15px;
+		}
+
+		i {
+			font-size: 0.8em;
+		}
+
+		> * {
+			margin-right: 1em;
+
+			&:last-child {
+				margin-right: unset;
+				text-align: right;
+			}
+
+			&:nth-child(2) {
+				flex-grow: 1;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+
+		.clickable {
+			color: $foreground-green;
+			cursor: pointer;
+			font-size: 80%;
+			font-weight: 600;
+			letter-spacing: 0.1em;
+			padding: 0.5em;
+			text-transform: uppercase;
+
+			&.alert {
+				color: $background-red;
+			}
+
+			&.active {
+				background-color: $background-green;
+				border-radius: 4px;
+				color: white;
+			}
+		}
+
+		img,
+		.placeholder {
+			background-color: $white-smoke;
+			flex-shrink: 0;
+			height: 1.5em;
+			width: 1.5em;
+		}
+
+		&:first-child {
+			border-top: none;
+		}
+
+		&.no-content {
+			cursor: default;
+			flex-direction: column;
+			padding-bottom: 5.6em;
+
+			&:hover {
+				margin-left: 1em;
+			}
+
+			svg {
+				margin: 3em auto 1em;
+			}
+
+			span {
+				overflow: initial;
+			}
+		}
+	}
+
+	.folder-element {
+		margin-left: 3.65em;
+
+		&:hover {
+			margin-left: 4em;
+		}
+
+		.type {
+			background-color: rgba(0, 0, 0, 0.06);
+			border-radius: 2px;
+			padding: 3px 5px;
+		}
+	}
+
+	.expander {
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin: 0 1em;
+		padding: 0.5em 0;
+		position: relative;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: inherit;
+	}
+}
